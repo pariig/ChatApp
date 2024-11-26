@@ -111,8 +111,7 @@ export default function Login () {
         <input 
         type='submit' 
         value="Login" 
-        className="text-white bg-blue-600 cursor-pointer w-full rounded-lg 
-        py-2"
+        className="text-white bg-blue-600 cursor-pointer w-full rounded-lg py-2"
         ></input>
         </div>
         <p>Dont Have any Account?{" "}

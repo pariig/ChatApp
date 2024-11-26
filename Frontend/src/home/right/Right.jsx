@@ -7,7 +7,7 @@ export default function Right() {
     <div className='w-[70%] border border-white bg-slate-950 text-white'>
      
       <Chatuser></Chatuser>
-      <div py-2 flex-ankit overflow-y-auto 
+      <div className="py-2 flex-ankit overflow-y-auto" 
       style={{maxHeight: "calc(92vh - 8vh)"}}>
       <Messages></Messages>
       </div >

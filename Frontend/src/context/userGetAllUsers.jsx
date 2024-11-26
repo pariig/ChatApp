@@ -23,7 +23,7 @@ function userGetAllUsers() {
                 setLoading(false)
         } 
         catch (error){
-            console.log("Error in userGetAllUsers"+ error)
+          
         }
     }
     getUsers()

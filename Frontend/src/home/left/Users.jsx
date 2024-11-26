@@ -2,8 +2,8 @@ import React from 'react'
 import User from './User'
 import userGetAllUsers from '../../context/userGetAllUsers'
 function Users() {
-  const [allUsers, loading]= userGetAllUsers
-  console.log(allUsers)
+  const [allUsers, loading]= userGetAllUsers()
+ 
   return (
    <div 
     className='py-2 flex-ankit overflow-y-auto'
