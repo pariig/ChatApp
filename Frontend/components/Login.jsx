@@ -21,7 +21,7 @@ export default function Login () {
       password: data.password,
     }
     axios
-    .post("http://localhost:5002/api/user",userInfo)
+    .post("/api/user/login",userInfo)
     //http://localhost:5002/login
     ///api/user/login
     .then((response)=>{
