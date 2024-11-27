@@ -6,6 +6,8 @@ export const AuthContext = createContext()
 export const AuthProvider = ({ children }) => {
     const initialUserState =
      Cookies.get("jwt") || localStorage.getItem("messenger")
+    const token=Cookies.get("jwt")
+    console.log(token)
 
     //parse the user data and storing in state
     const [authUser, setAuthUser] = useState(
