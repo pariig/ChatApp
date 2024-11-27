@@ -13,7 +13,8 @@ const secureRoute = async (req,res, next) =>{
         if(!verified){
             return res.status(403).json({message: "Invalid token" })
         }
-        const user =await User.findById(verified.userId ).select("-password")
+        const user =await User.findById(verified.userId ).select("-password") //current loggedin user
+
         if(!user){
             return res.status(404).json({message: "User not found"})
         }
@@ -22,7 +23,7 @@ const secureRoute = async (req,res, next) =>{
     }
 catch(error){
         console.log(error)
-        res.status(501).json({ message: "Internal server error"})
+        res.status(500).json({ message: "Internal server error"})
     }
 }
 export default secureRoute
