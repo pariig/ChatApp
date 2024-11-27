@@ -6,6 +6,7 @@ import Signup from '../components/Signup';
 import Login from '../components/Login';
 import { useAuth } from './context/AuthProvider';
 import { Routes, Route, Navigate } from 'react-router-dom'
+import Loading from '../components/Loading';
 
 function App() {
   const [authUser, setAuthUser] = useAuth()
@@ -13,7 +14,7 @@ function App() {
   return (
 
     <>
-
+     
       <Routes>
         <Route path='/' 
         element={
@@ -32,7 +33,7 @@ function App() {
           <Route path='/login' element={authUser?<Navigate to={"/"}/>:<Login />} />
           <Route path='/signup' element={authUser?<Navigate to={"/"}/>:<Signup />} />
 
-      </Routes>
+      </Routes> 
 
     </>
   )

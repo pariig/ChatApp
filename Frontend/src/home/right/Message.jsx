@@ -1,20 +1,21 @@
 import React from 'react'
 
-function Message() {
+function Message({message}) {
+  const authUser =JSON.parse(localStorage.getItem("messenger"))
+  const itsme =message.senderid ===authUser.user._id
+  console.log(authUser.user._id)
+  console.log(message.senderId)
+const chatName = itsme?"chat-end": "chat-start";
+const chatColor = itsme? "bg-blue-400": "";
   return (
     <>
        <div className='pd-4'>
-                <div className="chat chat-start">
-                    <div className="chat-bubble chat-bubble-info">Calm down, Anakin.</div>
+                <div className={`chat ${chatName}`}>
+                    <div className={`chat-bubble text-white ${chatColor}`}>{message.message}</div>
                 </div>
 
-                <div className="chat chat-end">
-                    <div className="chat-bubble chat-bubble-accent">
-                        That's never been done in the history of the Jedi. It's insulting!
-                    </div>
-                </div>
-
-            </div>
+                
+    </div>
       
     </>
   )
