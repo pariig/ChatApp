@@ -15,7 +15,7 @@ function useGetMessage() {
               `/api/message/get/${selectedConversation._id}`
             );
     
-            setMessages(res.data);
+            setMessages(response.data);
             setLoading(false);
           } catch (error) {
             console.log("Error in useGetMessage: ", error);
